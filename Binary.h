@@ -13,9 +13,13 @@
 class Binary:public Command
 {
 public:
+	Binary(void);
+
+	~Binary(void);
+
 	bool execute (void);
 
-	virtual int evaluate(int n1, int n2)const;
+	virtual int evaluate(int n1, int n2)const=0;
 };
 
 #endif
