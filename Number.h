@@ -22,7 +22,7 @@ public:
 
 protected:
 
-	Stack <int> & stack_;
+	Stack <int> stack_;
 	int number_;
 };
 #endif

@@ -10,9 +10,6 @@
 class Command
 {
 public:
-	Command(void);
-
-	~Command(void);
 
 	virtual void execute (void)=0;
 };

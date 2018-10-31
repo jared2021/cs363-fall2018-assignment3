@@ -12,8 +12,10 @@
 
 class Binary:public Command
 {
+protected:
+	Binary(Stack <int> & stack);
+
 public:
-	Binary(void);
 
 	~Binary(void);
 

@@ -6,8 +6,9 @@
  */
 
 #include "Binary.h"
+#include "Stack.cpp"
 
-Binary::Binary(void)
+Binary::Binary(Stack <int> & stack)
 {
 
 }
@@ -25,4 +26,3 @@ bool Binary::execute(void)
 	s.push(result);
 }
 
-virtual int Binary::evaluate (int n1,int n2)const =0;
