@@ -15,6 +15,7 @@ class Binary
 {
 
 public:
+
 	Binary(Stack <int> & stack);
 
 	~Binary(void);
