@@ -6,7 +6,6 @@
  */
 
 #include "Add_Command.h"
-#include "Binary.h"
 
 Add_Command::Add_Command(void)
 {

@@ -9,11 +9,10 @@
 #define _BINARY_H
 
 #include"Command.h"
+#include"Stack.h"
 
-class Binary:public Command
+class Binary
 {
-protected:
-	Binary(Stack <int> & stack);
 
 public:
 	Binary(Stack <int> & stack);

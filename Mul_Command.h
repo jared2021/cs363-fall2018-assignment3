@@ -8,7 +8,7 @@
 #ifdef _MUL_COMMAND_H
 #define _MUL_COMMAND_H
 
-#include "Binary.cpp"
+#include "Binary.h"
 
 class Mul_Command:public Binary
 {

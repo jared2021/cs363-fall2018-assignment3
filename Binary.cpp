@@ -6,9 +6,9 @@
  */
 
 #include "Binary.h"
-#include "Stack.h"
 
 Binary::Binary(Stack <int> & stack)
+:s_(stack)
 {
 
 }

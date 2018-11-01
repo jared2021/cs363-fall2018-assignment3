@@ -8,6 +8,8 @@
 #ifdef _DIV_COMMAND_H_
 #define _DIV_COMMAND_H_
 
+#include "Binary.h"
+
 class Div_Command:public Binary
 {
 public:

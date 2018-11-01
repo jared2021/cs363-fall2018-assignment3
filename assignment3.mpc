@@ -9,13 +9,15 @@ project (assignment3){
 	}
 
 	Source_Files{
-		Calculator.cpp
+		Binary.cpp
+		Number.cpp
 		Add_Command.cpp
 		Div_Command.cpp
 		Mul_Command.cpp
 		Sub_Command.cpp
-		Number.cpp
-		Binary.cpp
+		Expr_Command_Factory.cpp
+		Stack_Expr_Command_Factory.cpp
+		Calculator.cpp
 	}
 
 	Template_Files{

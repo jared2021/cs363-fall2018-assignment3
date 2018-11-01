@@ -5,7 +5,6 @@
  *
  */
 
-#include "Binary.cpp"
 #include "Div_Command.h"
 
 Div_Command::Div_Command(void)

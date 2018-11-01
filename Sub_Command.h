@@ -8,7 +8,7 @@
 #ifdef _SUB_COMMAND_H
 #define _SUB_COMMAND_H
 
-#include "Binary.cpp"
+#include "Binary.h"
 
 class Sub_Command:public Binary
 {

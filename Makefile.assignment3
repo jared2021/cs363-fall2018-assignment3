@@ -31,8 +31,8 @@ LIBPREFIX     = lib
 LIBSUFFIX     = 
 GENFLAGS      = -O
 LDLIBS        = -ldl $(subst lib,-l,$(sort $(basename $(notdir $(wildcard /usr/lib/librt.so /lib/librt.so))))) -lpthread
-OBJS          = Calculator$(OBJEXT) Add_Command$(OBJEXT) Div_Command$(OBJEXT) Mul_Command$(OBJEXT) Sub_Command$(OBJEXT) Number$(OBJEXT) Binary$(OBJEXT)
-SRC           = Calculator.cpp Add_Command.cpp Div_Command.cpp Mul_Command.cpp Sub_Command.cpp Number.cpp Binary.cpp
+OBJS          = Binary$(OBJEXT) Number$(OBJEXT) Add_Command$(OBJEXT) Div_Command$(OBJEXT) Mul_Command$(OBJEXT) Sub_Command$(OBJEXT) Expr_Command_Factory$(OBJEXT) Stack_Expr_Command_Factory$(OBJEXT) Calculator$(OBJEXT)
+SRC           = Binary.cpp Number.cpp Add_Command.cpp Div_Command.cpp Mul_Command.cpp Sub_Command.cpp Expr_Command_Factory.cpp Stack_Expr_Command_Factory.cpp Calculator.cpp
 LINK.cc       = $(LD) $(LDFLAGS)
 EXPORTFLAGS   = 
 DEPLIBS       = $(foreach lib, , $(foreach libpath, ., $(wildcard $(libpath)/lib$(lib).a)))
@@ -50,8 +50,11 @@ $(BIN): $(OBJS) $(DEPLIBS)
 generated: $(GENERATED_DIRTY)
 	@-:
 
-Calculator$(OBJEXT): Calculator.cpp
-	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Calculator.cpp
+Binary$(OBJEXT): Binary.cpp
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Binary.cpp
+
+Number$(OBJEXT): Number.cpp
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Number.cpp
 
 Add_Command$(OBJEXT): Add_Command.cpp
 	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Add_Command.cpp
@@ -65,11 +68,14 @@ Mul_Command$(OBJEXT): Mul_Command.cpp
 Sub_Command$(OBJEXT): Sub_Command.cpp
 	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Sub_Command.cpp
 
-Number$(OBJEXT): Number.cpp
-	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Number.cpp
+Expr_Command_Factory$(OBJEXT): Expr_Command_Factory.cpp
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Expr_Command_Factory.cpp
 
-Binary$(OBJEXT): Binary.cpp
-	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Binary.cpp
+Stack_Expr_Command_Factory$(OBJEXT): Stack_Expr_Command_Factory.cpp
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Stack_Expr_Command_Factory.cpp
+
+Calculator$(OBJEXT): Calculator.cpp
+	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Calculator.cpp
 
 clean:
 	-$(RM) $(OBJS)

@@ -29,5 +29,7 @@ public:
 private:
 
 	Stack <int> stack_;
+
+	int number;
 };
 #endif

@@ -9,8 +9,9 @@
 #define _NUMBER_H
 
 #include "Command.h"
+#include "Stack.h"
 
-class Number:public Command
+class Number
 {
 public:
 
