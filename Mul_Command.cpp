@@ -8,6 +8,8 @@
 #include "Mul_Command.h"
 
 Mul_Command::Mul_Command(void)
+:Binary(Stack <int> & stack),
+stack_(stack)
 {
 
 }
