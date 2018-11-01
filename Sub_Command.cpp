@@ -5,7 +5,7 @@
  *
  */
 
-#include "Binary.cpp"
+#include "Binary.h"
 #include "Sub_Command.h"
 
 Sub_Command::Sub_Command(void)

@@ -56,6 +56,5 @@ protected:
 };
 
 #include "Array_Base.cpp"
-#include "Array_Base.inl"
 
 #endif

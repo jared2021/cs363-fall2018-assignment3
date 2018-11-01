@@ -119,7 +119,6 @@ public:
   bool operator != (const Array & rhs) const;
 };
 
-#include "Array.inl"
 #include "Array.cpp"
 
 #endif   // !defined _ARRAY_H_

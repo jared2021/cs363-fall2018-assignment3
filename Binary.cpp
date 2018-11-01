@@ -6,7 +6,7 @@
  */
 
 #include "Binary.h"
-#include "Stack.cpp"
+#include "Stack.h"
 
 Binary::Binary(Stack <int> & stack)
 {
@@ -23,6 +23,6 @@ bool Binary::execute(void)
 	int n2=s_.pop();
 	int n1=s_.pop();
 	int result=this->evaluate(n1,n2);
-	s.push(result);
+	s_.push(result);
 }
 

@@ -1,0 +1,25 @@
+
+
+project (assignment3){
+	exename=assignment2
+	install= .
+
+	specific (make, gnuace){
+		compile_flags += -std=c++11
+	}
+
+	Source_Files{
+		Calculator.cpp
+		Add_Command.cpp
+		Div_Command.cpp
+		Mul_Command.cpp
+		Sub_Command.cpp
+		Number.cpp
+		Binary.cpp
+	}
+
+	Template_Files{
+		Array.cpp
+		Stack.cpp
+	}
+}
