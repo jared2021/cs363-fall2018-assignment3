@@ -16,7 +16,7 @@ Number::Number(Stack <int> &s, int n)
 
 Number::~Number(void)
 {
-	delete stack_;
+
 }
 
 void Number::execute (void)

@@ -13,11 +13,11 @@
 class Add_Command:public Binary
 {
 public:
-	Add_Command(void)
+	Add_Command(void);
 
-	~Add_Command(void)
+	~Add_Command(void);
 	
-	int evaluate (int n1, int n2)	
+	int evaluate (int n1, int n2);
 };
 
 #endif
