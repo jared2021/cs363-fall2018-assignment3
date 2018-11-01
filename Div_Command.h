@@ -13,11 +13,13 @@
 class Div_Command:public Binary
 {
 public:
+	Div_Command(void);
+
 	Div_Command(Stack <int> & stack);
 
 	~Div_Command(void);
 
-	int evaulate (int n1, int n2);
+	virtual int evaluate (int n1, int n2)const;
 };
 
 #endif

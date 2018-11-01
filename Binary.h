@@ -11,16 +11,18 @@
 #include"Command.h"
 #include"Stack.h"
 
-class Binary
+class Binary : public Command
 {
 
 public:
 
+	Binary(void);
+
 	Binary(Stack <int> & stack);
 
-	~Binary(void);
+	virtual ~Binary(void);
 
-	bool execute (void);
+	virtual bool execute (void);
 
 	virtual int evaluate(int n1, int n2)const=0;
 

@@ -7,6 +7,11 @@
 
 #include "Binary.h"
 
+Binary::Binary(void)
+{
+
+}
+
 Binary::Binary(Stack <int> & stack)
 :s_(stack)
 {
@@ -22,7 +27,7 @@ bool Binary::execute(void)
 {
 	int n2=s_.pop();
 	int n1=s_.pop();
-	int result=this->evaluate(n1,n2);
+	int result=evaluate(n1,n2);
 	s_.push(result);
 }
 

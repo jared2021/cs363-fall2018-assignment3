@@ -13,12 +13,13 @@
 class Sub_Command:public Binary
 {
 public:
+	Sub_Command(void);
 
 	Sub_Command(Stack <int> & stack);
 
-	~Sub_Command(void);
+	virtual ~Sub_Command(void);
 
-	int evaluate(int n1, int n2);
+	virtual int evaluate(int n1, int n2)const;
 };
 
 #endif

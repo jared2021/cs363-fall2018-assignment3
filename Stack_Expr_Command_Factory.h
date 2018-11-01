@@ -9,28 +9,27 @@
 #define _STACK_EXPR_COMMAND_FACTORY_H_
 
 #include "Expr_Command_Factory.h"
-#include "Add_Command.h"
-#include "Sub_Command.h"
-#include "Mul_Command.h"
-#include "Div_Command.h"
-#include "Mod_Command.h"
 
 class Stack_Expr_Command_Factory:public Expr_Command_Factory
 {
 public:
+	Stack_Expr_Command_Factory(void);
+
 	Stack_Expr_Command_Factory (Stack <int> & stack);
 
-	~Stack_Expr_Command_Factory(void)
+	~Stack_Expr_Command_Factory(void);
 
-	virtual Number_Command (int num);
+	virtual Number* Number_Create (int num);
 
-	virtual Add_Command(void);
-	
-	virtual Sub_Command(void);
+	virtual Add_Command* Add_Create(void);
+	 
+	virtual Sub_Command* Sub_Create(void);
 
-	virtual Mul_Command(void);
+	virtual Mul_Command* Mul_Create(void);
 
-	virtual Div_Command(void);
+	virtual Div_Command* Div_Create(void);
+
+	virtual Mod_Command* Mod_Create(void);
 
 private:
 

@@ -13,11 +13,13 @@
 class Add_Command:public Binary
 {
 public:
+	Add_Command(void);
+
 	Add_Command(Stack <int> & stack);
 
 	~Add_Command(void);
 	
-	int evaluate (int n1, int n2);
+	virtual int evaluate (int n1, int n2)const;
 };
 
 #endif

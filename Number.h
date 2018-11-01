@@ -14,6 +14,7 @@
 class Number
 {
 public:
+	Number(void);
 
 	Number(Stack <int> & s, int n);
 

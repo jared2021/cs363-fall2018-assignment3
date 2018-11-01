@@ -4,11 +4,12 @@
  * on this assignment.
  *
  */
-#include "Add_Command.h"
-#include "Div_Command.h"
-#include "Mul_Command.h"
-#include "Sub_Command.h"
 #include "Stack_Expr_Command_Factory.h"
+
+Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(void)
+{
+
+}
 
 Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(Stack <int> & stack)
 :stack_(stack)
@@ -18,36 +19,42 @@ Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(Stack <int> & stack)
 
 Stack_Expr_Command_Factory::~Stack_Expr_Command_Factory(void)
 {
-	delete stack_;
+	
 }
 
-Number_Command::Stack_Expr_Command_Factory(int num)
-:number(num)
+Number* Stack_Expr_Command_Factory::Number_Create(int num)
 {
-	Number_Command c= new Number_Command(number);
+	number=num;
+	Number* c= new Number(stack_,number);
 	return c;
 }
 
-Add_Command::Stack_Expr_Command_Factory(void)
+Add_Command* Stack_Expr_Command_Factory::Add_Create(void)
 {
-	Add_Command c= new Add_Command();
+	Add_Command* c= new Add_Command(stack_);
 	return c;
 }
 
-Sub_Command::Stack_Expr_Command_Factory(void)
+Sub_Command* Stack_Expr_Command_Factory::Sub_Create(void)
 {
-	Sub_Command c= new Sub_Command();
+	Sub_Command* c= new Sub_Command(stack_);
 	return c;
 }
 
-Mul_Command::Stack_Expr_Command_Factory(void)
+Mul_Command* Stack_Expr_Command_Factory::Mul_Create(void)
 {
-	Mul_Command c= new Mul_Command();
+	Mul_Command* c= new Mul_Command(stack_);
 	return c;
 }
 
-Div_Command::Stack_Expr_Command_Factory(void)
+Div_Command* Stack_Expr_Command_Factory::Div_Create(void)
 {
-	Div_Command c= new Div_Command();
+	Div_Command* c= new Div_Command(stack_);
+	return c;
+}
+
+Mod_Command* Stack_Expr_Command_Factory::Mod_Create(void)
+{
+	Mod_Command* c= new Mod_Command(stack_);
 	return c;
 }

@@ -7,6 +7,11 @@
 
 #include "Number.h"
 
+Number::Number(void)
+{
+
+}
+
 Number::Number(Stack <int> &s, int n)
 :stack_(s),
  number_(n)

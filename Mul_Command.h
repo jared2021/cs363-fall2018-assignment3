@@ -13,12 +13,13 @@
 class Mul_Command:public Binary
 {
 public:
+	Mul_Command(void);
 
 	Mul_Command(Stack <int> & stack);
 
 	~Mul_Command(void);
 
-	int evaluate (int n1,int n2);
+	virtual int evaluate (int n1,int n2)const;
 
 private:
 

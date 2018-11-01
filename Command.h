@@ -4,14 +4,14 @@
  * on this assignment.
  */
 
-#ifdef _COMMAND_H
+#ifndef _COMMAND_H
 #define _COMMAND_H
 
 class Command
 {
 public:
 
-	virtual void execute (void)=0;
+	virtual bool execute (void)=0;
 };
 
 #endif 

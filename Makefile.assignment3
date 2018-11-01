@@ -16,7 +16,7 @@ CCC           = $(CXX)
 MAKEFILE      = Makefile.assignment3
 DEPENDENCIES  = .depend.$(MAKEFILE)
 BTARGETDIR    = ./
-BIN           = $(BTARGETDIR)assignment2$(EXESUFFIX)$(EXEEXT)
+BIN           = $(BTARGETDIR)assignment3$(EXESUFFIX)$(EXEEXT)
 CAT           = cat
 MV            = mv -f
 RM            = rm -rf
@@ -31,8 +31,8 @@ LIBPREFIX     = lib
 LIBSUFFIX     = 
 GENFLAGS      = -O
 LDLIBS        = -ldl $(subst lib,-l,$(sort $(basename $(notdir $(wildcard /usr/lib/librt.so /lib/librt.so))))) -lpthread
-OBJS          = Binary$(OBJEXT) Number$(OBJEXT) Add_Command$(OBJEXT) Div_Command$(OBJEXT) Mul_Command$(OBJEXT) Sub_Command$(OBJEXT) Mod_Command$(OBJEXT) Expr_Command_Factory$(OBJEXT) Stack_Expr_Command_Factory$(OBJEXT) Calculator$(OBJEXT)
-SRC           = Binary.cpp Number.cpp Add_Command.cpp Div_Command.cpp Mul_Command.cpp Sub_Command.cpp Mod_Command.cpp Expr_Command_Factory.cpp Stack_Expr_Command_Factory.cpp Calculator.cpp
+OBJS          = Binary$(OBJEXT) Number$(OBJEXT) Add_Command$(OBJEXT) Div_Command$(OBJEXT) Mul_Command$(OBJEXT) Sub_Command$(OBJEXT) Mod_Command$(OBJEXT) Stack_Expr_Command_Factory$(OBJEXT) Calculator$(OBJEXT)
+SRC           = Binary.cpp Number.cpp Add_Command.cpp Div_Command.cpp Mul_Command.cpp Sub_Command.cpp Mod_Command.cpp Stack_Expr_Command_Factory.cpp Calculator.cpp
 LINK.cc       = $(LD) $(LDFLAGS)
 EXPORTFLAGS   = 
 DEPLIBS       = $(foreach lib, , $(foreach libpath, ., $(wildcard $(libpath)/lib$(lib).a)))
@@ -70,9 +70,6 @@ Sub_Command$(OBJEXT): Sub_Command.cpp
 
 Mod_Command$(OBJEXT): Mod_Command.cpp
 	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Mod_Command.cpp
-
-Expr_Command_Factory$(OBJEXT): Expr_Command_Factory.cpp
-	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Expr_Command_Factory.cpp
 
 Stack_Expr_Command_Factory$(OBJEXT): Stack_Expr_Command_Factory.cpp
 	$(COMPILE.cc) $(EXPORTFLAGS) $(OUTPUT_OPTION) Stack_Expr_Command_Factory.cpp
