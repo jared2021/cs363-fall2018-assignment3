@@ -5,7 +5,7 @@
  *
  */
 
-#ifdef _SUB_COMMAND_H
+#ifndef _SUB_COMMAND_H
 #define _SUB_COMMAND_H
 
 #include "Binary.h"

@@ -4,7 +4,7 @@
   *
   */
 
-#ifdef _MOD_COMMAND_H_
+#ifndef _MOD_COMMAND_H_
 #define _MOD_COMMAND_H_
 
 #include "Binary.h"

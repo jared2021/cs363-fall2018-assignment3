@@ -5,7 +5,7 @@
  *
  */
 
-#ifdef _DIV_COMMAND_H_
+#ifndef _DIV_COMMAND_H_
 #define _DIV_COMMAND_H_
 
 #include "Binary.h"

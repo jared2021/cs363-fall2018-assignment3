@@ -5,6 +5,9 @@
   *
   */
 
+#ifndef _EXPR_COMMAND_FACTORY_H
+#define _EXPR_COMMAND_FACTORY_H
+
 class Expr_Command_Factory
 {
 public:
@@ -18,4 +21,6 @@ public:
 	virtual Mul_Command(void)=0;
 
 	virtual Div_Command(void)=0;
-}
+};
+
+#endif

@@ -5,7 +5,7 @@
  *
  */
 
-#ifdef _NUMBER_H
+#ifndef _NUMBER_H
 #define _NUMBER_H
 
 #include "Command.h"

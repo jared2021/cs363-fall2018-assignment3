@@ -5,10 +5,16 @@
   *
   */
 
-#ifdef _STACK_EXPR_COMMAND_FACTORY_H_
+#ifndef _STACK_EXPR_COMMAND_FACTORY_H_
 #define _STACK_EXPR_COMMAND_FACTORY_H_
 
 #include "Expr_Command_Factory.h"
+#include "Add_Command.h"
+#include "Sub_Command.h"
+#include "Mul_Command.h"
+#include "Div_Command.h"
+#include "Mod_Command.h"
+
 class Stack_Expr_Command_Factory:public Expr_Command_Factory
 {
 public:
