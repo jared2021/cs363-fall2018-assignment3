@@ -4,11 +4,11 @@
  *
  */
 #include <iostream>
-//#include "Add_Command.h"
-//#include "Div_Command.h"
-//#include "Mul_Command.h"
-//#include "Number.h"
-//#include "Sub_Command.h"
+#include "Add_Command.h"
+#include "Div_Command.h"
+#include "Mul_Command.h"
+#include "Number.h"
+#include "Sub_Command.h"
 #include <string>
 #include <sstream>
 
