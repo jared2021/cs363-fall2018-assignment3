@@ -7,7 +7,8 @@
 
 #include "Div_Command.h"
 
-Div_Command::Div_Command(void)
+Div_Command::Div_Command(Stack <int> & stack)
+:Binary(stack)
 {
 
 }
@@ -17,7 +18,7 @@ Div_Command::~Div_Command(void)
 
 }
 
-int Div_Command::evaluate (int n1, int n2)
+int Div_Command::evaulate (int n1, int n2)
 {
 	return (n1/n2);
 }

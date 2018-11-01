@@ -7,7 +7,8 @@
 
 #include "Sub_Command.h"
 
-Sub_Command::Sub_Command(void)
+Sub_Command::Sub_Command(Stack <int> & stack)
+:Binary(stack)
 {
 
 }

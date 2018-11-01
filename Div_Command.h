@@ -13,11 +13,11 @@
 class Div_Command:public Binary
 {
 public:
-	Div_Command(void);
+	Div_Command(Stack <int> & stack);
 
 	~Div_Command(void);
 
-	int evaulate (int n1, int n2)
+	int evaulate (int n1, int n2);
 };
 
 #endif

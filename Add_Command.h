@@ -13,7 +13,7 @@
 class Add_Command:public Binary
 {
 public:
-	Add_Command(void);
+	Add_Command(Stack <int> & stack);
 
 	~Add_Command(void);
 	

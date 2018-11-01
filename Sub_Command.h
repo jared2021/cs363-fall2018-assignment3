@@ -14,7 +14,7 @@ class Sub_Command:public Binary
 {
 public:
 
-	Sub_Command(void);
+	Sub_Command(Stack <int> & stack);
 
 	~Sub_Command(void);
 

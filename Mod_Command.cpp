@@ -7,7 +7,8 @@
 
 #include "Mod_Command.h"
 
-Mod_Command::Mod_Command(void)
+Mod_Command::Mod_Command(Stack <int> & stack)
+:Binary(stack)
 {
 
 }

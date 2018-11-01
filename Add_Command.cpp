@@ -7,7 +7,8 @@
 
 #include "Add_Command.h"
 
-Add_Command::Add_Command(void) 
+Add_Command::Add_Command(Stack <int> & stack)
+:Binary(stack)
 {
 
 }

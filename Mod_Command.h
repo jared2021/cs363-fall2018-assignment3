@@ -11,11 +11,11 @@
 class Mod_Command:public Binary
 {
 public:
-	Mod_Command(void)
+	Mod_Command(Stack <int> & stack);
 
-	~Mod_Command(void)
+	~Mod_Command(void);
 
-	int evaluate (int n1, int n2)
+	int evaluate (int n1, int n2);
 };
 
 #endif

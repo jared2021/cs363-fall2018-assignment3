@@ -14,7 +14,7 @@ class Mul_Command:public Binary
 {
 public:
 
-	Mul_Command(void);
+	Mul_Command(Stack <int> & stack);
 
 	~Mul_Command(void);
 
