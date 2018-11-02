@@ -26,6 +26,7 @@ project (assignment3){
 	}
 
 	Template_Files{
+		Array_Base.cpp
 		Array.cpp
 		Stack.cpp
 	}
