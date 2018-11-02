@@ -24,7 +24,7 @@ Number::~Number(void)
 
 }
 
-void Number::execute (void)
+bool Number::execute (void)
 {
 	stack_.push(number_);
 }

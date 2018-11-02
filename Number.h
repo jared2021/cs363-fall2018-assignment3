@@ -11,7 +11,7 @@
 #include "Command.h"
 #include "Stack.h"
 
-class Number
+class Number:public Command
 {
 public:
 	Number(void);
@@ -20,7 +20,7 @@ public:
 
 	~Number(void);
 
-	void execute(void);
+	bool execute(void);
 
 protected:
 

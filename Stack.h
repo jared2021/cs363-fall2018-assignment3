@@ -126,7 +126,7 @@ private:
 };
 
 // include the inline files
-
+#include "Stack.inl"
 // include the source file since template class
 #include "Stack.cpp"
 
