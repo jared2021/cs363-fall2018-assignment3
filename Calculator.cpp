@@ -26,11 +26,11 @@ int main()
 		std::cout<<"Is this it?"<<'\n';
 		Command * cmd=0;
 		std::cout<<"Does this work?"<<'\n';
-		Stack <Command *> temp;
+		Stack <Command *> *temp=new Stack <Command *>;
 		std::cout<< "here?";
 		Stack <int> answer;
 		Stack_Expr_Command_Factory factory(answer);
-		Array <Command *> postfix;
+		Array <Command *> *postfix=new Array <Command *>;
 		Stack <char> precidence;
 		Stack <Command *> output;
 		int slot=0;
@@ -39,6 +39,7 @@ int main()
 		{
 			bool parenthesis=false;
 			filter>>token;
+			std::cout<< token<<'\n';
 			if(token=="+")
 			{
 				cmd=factory.Add_Create();
@@ -46,7 +47,7 @@ int main()
 				{
 					if(precidence.top()!= '>')
 					{
-						temp.push(cmd);
+						(*temp).push(cmd);
 						precidence.push('<');
 					}
 					else if(precidence.top()=='>'||precidence.top()=='=')
@@ -54,19 +55,19 @@ int main()
 						while(precidence.top()=='>'||precidence.top()=='=')
 						{
 							precidence.pop();
-							postfix.set(slot,temp.pop());
+							(*postfix).set(slot,(*temp).pop());
 							slot=slot+1;
 						}
 					}
 					else
 					{
-						temp.push(cmd);
+						(*temp).push(cmd);
 						precidence.push('<');
 					}
 				}
 				else
 				{
-					temp.push(cmd);
+					(*temp).push(cmd);
 					precidence.push('=');
 				}
 			}
@@ -77,7 +78,7 @@ int main()
 				{
 					if(precidence.top()!='>')
 					{
-						temp.push(cmd);
+						(*temp).push(cmd);
 						precidence.push('<');
 					}
 					else if(precidence.top()=='>'||precidence.top()=='=')
@@ -85,19 +86,19 @@ int main()
 						while(precidence.top()=='>'||precidence.top()=='=')
 						{
 							precidence.pop();
-							postfix.set(slot,temp.pop());
+							(*postfix).set(slot,(*temp).pop());
 							slot=slot+1;
 						}
 					}
 					else
 					{
-						temp.push(cmd);
+						(*temp).push(cmd);
 						precidence.push('<');
 					}
 				}
 				else
 				{
-					temp.push(cmd);
+					(*temp).push(cmd);
 					precidence.push('=');
 				}
 			}
@@ -111,19 +112,19 @@ int main()
 						while(precidence.top()=='=')
 						{
 							precidence.pop();
-							postfix.set(slot,temp.pop());
+							(*postfix).set(slot,(*temp).pop());
 							slot=slot+1;
 						}
 					}
 					else
 					{
-						temp.push(cmd);
+						(*temp).push(cmd);
 						precidence.push('>');
 					}
 				}
 				else
 				{
-					temp.push(cmd);
+					(*temp).push(cmd);
 					precidence.push('>');
 				}
 			}
@@ -137,19 +138,19 @@ int main()
 						while(precidence.top()=='=')
 						{
 							precidence.pop();
-							postfix.set(slot,temp.pop());
+							(*postfix).set(slot,(*temp).pop());
 							slot=slot+1;
 						}
 					}
 					else
 					{
-						temp.push(cmd);
+						(*temp).push(cmd);
 						precidence.push('>');
 					}
 				}
 				else
 				{
-					temp.push(cmd);
+					(*temp).push(cmd);
 					precidence.push('>');
 				}
 			}
@@ -163,19 +164,19 @@ int main()
 						while(precidence.top()=='=')
 						{
 							precidence.pop();
-							postfix.set(slot,temp.pop());
+							(*postfix).set(slot,(*temp).pop());
 							slot=slot+1;
 						}
 					}
 					else
 					{
-						temp.push(cmd);
+						(*temp).push(cmd);
 						precidence.push('>');
 					}
 				}
 				else
 				{
-					temp.push(cmd);
+					(*temp).push(cmd);
 					precidence.push('>');
 				}
 			}
@@ -193,26 +194,32 @@ int main()
 				std::istringstream converter(token);
 				converter>>placeholder;
 				cmd=factory.Number_Create(placeholder);
-				postfix.set(slot,cmd);
+				(*postfix).set(slot,cmd);
+				std::cout<<"Placing a "<<cmd<< "in the Array in slot number "<<slot<<"."<<'\n';
 				slot=slot+1;
 			}
 		}
-		while(!temp.is_empty())
+		while(!(*temp).is_empty())
 		{
-			postfix.set(slot,temp.pop());
+			(*postfix).set(slot,(*temp).pop());
 			slot=slot+1;
 		}
 		for(int i=slot;i<-1;--i )
 		{
-			output.push(postfix.get(i));
+			output.push((*postfix).get(i));
 		}
+		output.print();
 		while(!output.is_empty())
 		{
 			Command* c=output.pop();
 			(*c).execute();
+			delete c;
 		}
 	std::cout<< "Your answer is "<<answer.top()<<'\n';
 	std::cout<< "Please type in your equation or type 'QUIT' to exit the program.";
 	std::cin>>input;
+	filter.clear();
+	delete temp;
+	delete postfix;
 	}	
 }
