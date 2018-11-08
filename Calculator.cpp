@@ -13,6 +13,13 @@
 #include <string>
 #include <sstream>
 
+// COMMENT: Instead of using C functions to implement parts of the
+// calculator. It would be better suited to use a Wrapper Facade.
+
+// COMMENT: Improve the design of your commands to reduce the design
+// complexity of this method. Right now, there are too many if-else
+// statements, and a lot of duplicate code.
+
 int main()
 {
 	std::string input;
@@ -206,11 +213,14 @@ int main()
 		{
 			output.push(postfix.get(i));
 		}
+    
+    
 		while(!output.is_empty())
 		{
 			Command* c=output.pop();
 			(*c).execute();
 		}
+    
 	std::cout<< "Your answer is "<<answer.top()<<'\n';
 	std::cout<< "Please type in your equation or type 'QUIT' to exit the program.";
 	std::cin>>input;
