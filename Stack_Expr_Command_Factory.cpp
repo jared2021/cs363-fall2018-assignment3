@@ -11,8 +11,8 @@ Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(void)
 
 }
 
-Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(Stack <int> & stack)
-:stack_(stack)
+Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(Stack <int> & answer)
+:stack_(answer)
 {
 
 }

@@ -26,6 +26,13 @@ Div_Command::~Div_Command(void)
 int Div_Command::evaluate (int n1, int n2)const
 {
   // COMMENT: You are not handling divide by zero.
-
-	return (n1/n2);
+  // RESPONSE Now handle dividing by zero.
+	if(n2==0)
+	{
+		throw("Cannot divide by zero.");
+	}
+	else
+	{
+		return (n1/n2);
+	}
 }

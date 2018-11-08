@@ -5,10 +5,12 @@
  */
 #include <iostream>
 #include "Add_Command.h"
+#include "Converter.h"
 #include "Div_Command.h"
 #include "Mul_Command.h"
 #include "Sub_Command.h"
 #include "Mod_Command.h"
+#include "Precidence.h"
 #include "Stack_Expr_Command_Factory.h"
 #include <string>
 #include <sstream>
@@ -22,30 +24,27 @@
 
 int main()
 {
-	std::string input;
+	std::string infix;
 	std::string exit="QUIT";
 	std::string token;
 	std::cout<<"Please type in your equation or 'QUIT' to exit the program. "<<'\n';
-	std::cin>>input;
-	while(input!=exit)
+	std::cin>>infix;
+	while(infix!=exit)
 	{
-		std::istringstream filter(input);
-		std::cout<<"Is this it?"<<'\n';
+		std::istringstream input(infix);
 		Command * cmd=0;
-		std::cout<<"Does this work?"<<'\n';
 		Stack <Command *> *temp=new Stack <Command *>;
-		std::cout<< "here?";
 		Stack <int> answer;
-		Stack_Expr_Command_Factory factory(answer);
-		Array <Command *> *postfix=new Array <Command *>;
+		Stack_Expr_Command_Factory factory( answer);
+		Array <Command *> postfix;
+		Precidence (infix,factory,postfix);
 		Stack <char> precidence;
 		Stack <Command *> output;
 		int slot=0;
-		std::cout<<"Got to here."<<'\n';
-		while(!filter.eof())
+		while(!input.eof())
 		{
 			bool parenthesis=false;
-			filter>>token;
+			input>>token;
 			std::cout<< token<<'\n';
 			if(token=="+")
 			{
@@ -62,7 +61,7 @@ int main()
 						while(precidence.top()=='>'||precidence.top()=='=')
 						{
 							precidence.pop();
-							(*postfix).set(slot,(*temp).pop());
+							postfix.set(slot,(*temp).pop());
 							slot=slot+1;
 						}
 					}
@@ -93,7 +92,7 @@ int main()
 						while(precidence.top()=='>'||precidence.top()=='=')
 						{
 							precidence.pop();
-							(*postfix).set(slot,(*temp).pop());
+							postfix.set(slot,(*temp).pop());
 							slot=slot+1;
 						}
 					}
@@ -119,7 +118,7 @@ int main()
 						while(precidence.top()=='=')
 						{
 							precidence.pop();
-							(*postfix).set(slot,(*temp).pop());
+							postfix.set(slot,(*temp).pop());
 							slot=slot+1;
 						}
 					}
@@ -145,7 +144,7 @@ int main()
 						while(precidence.top()=='=')
 						{
 							precidence.pop();
-							(*postfix).set(slot,(*temp).pop());
+							postfix.set(slot,(*temp).pop());
 							slot=slot+1;
 						}
 					}
@@ -171,7 +170,7 @@ int main()
 						while(precidence.top()=='=')
 						{
 							precidence.pop();
-							(*postfix).set(slot,(*temp).pop());
+							postfix.set(slot,(*temp).pop());
 							slot=slot+1;
 						}
 					}
@@ -201,19 +200,19 @@ int main()
 				std::istringstream converter(token);
 				converter>>placeholder;
 				cmd=factory.Number_Create(placeholder);
-				(*postfix).set(slot,cmd);
+				postfix.set(slot,cmd);
 				std::cout<<"Placing a "<<cmd<< "in the Array in slot number "<<slot<<"."<<'\n';
 				slot=slot+1;
 			}
 		}
 		while(!(*temp).is_empty())
 		{
-			(*postfix).set(slot,(*temp).pop());
+			postfix.set(slot,(*temp).pop());
 			slot=slot+1;
 		}
 		for(int i=slot;i<-1;--i )
 		{
-			output.push((*postfix).get(i));
+			output.push(postfix.get(i));
 		}
 		output.print();
 		while(!output.is_empty())
@@ -225,9 +224,8 @@ int main()
     
 	std::cout<< "Your answer is "<<answer.top()<<'\n';
 	std::cout<< "Please type in your equation or type 'QUIT' to exit the program.";
-	std::cin>>input;
-	filter.clear();
+	std::cin>>infix;
+	input.clear();
 	delete temp;
-	delete postfix;
 	}	
 }
