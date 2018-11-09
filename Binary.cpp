@@ -25,7 +25,9 @@ Binary::~Binary(void)
 
 bool Binary::execute(void)
 {
+	std::cout<<"Popping the first number off the stack."<<'\n';
 	int n2=s_.pop();
+	std::cout<<"Popping the second number off the stack."<<'\n';
 	int n1=s_.pop();
 	int result=evaluate(n1,n2);
 	s_.push(result);

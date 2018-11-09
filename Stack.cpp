@@ -66,6 +66,7 @@ T Stack <T>::pop (void)
 	if(top_!=0)
 	{
 		top_=top_-1;
+		(myArray).set_size((myArray).size()-1);
 		T temp=(myArray).get(top_);
 		return temp;		
 	}
