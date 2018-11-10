@@ -31,7 +31,6 @@ bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory &
 	std::istringstream input(infix);
 	std::string token;
 	Command *cmd=0;
-	int slot=0;
 	while(!input.eof ())
 	{
 		input>>token;
@@ -69,7 +68,7 @@ bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory &
 			std::istringstream converter(token);
 			converter>>placeholder;
 			cmd=factory.Number_Create(placeholder);
-			postfix.set(slot,cmd);
+			postfix.set(slot_,cmd);
 			std::cout<<"Incrementing slot(while loop 1)"<<'\n';
 			slot_=slot_+1;
 		}
@@ -77,12 +76,12 @@ bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory &
 	while(!temp_.is_empty())
 	{
 		std::cout<<"Popping elements off of the stack.(Converter while loop)"<<'\n';
-		postfix.set(slot,temp_.pop());
+		postfix.set(slot_,temp_.pop());
 		std::cout<<"Incrementing slot (while loop 2)"<<'\n';
 		slot_=slot_+1;
 	}
 	Stack <Command *> output;
-	for(int i=slot_;i<0;--i)
+	for(int i=0;i<slot_;i++)
 	{
 		std::cout<<"Pushing elements onto the output stack."<<'\n';
 		output.push(postfix.get(i));

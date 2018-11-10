@@ -35,12 +35,12 @@ int main()
 		Stack_Expr_Command_Factory factory( answer);
 		Array <Command *> postfix;
 		Stack <char> precidence;
-		Stack <Command *> output;
+		//Stack <Command *> output;
 		Converter convert (temp,precidence);
 		convert.infix_to_postfix(infix,factory,postfix);
-		//int slot=convert.get_slot();
+		int slot=convert.get_slot();
 		//std::cout<<slot<<'\n';
-		//for(int i=slot;i<0;--i )
+		//for(int i=0;i<slot;i++ )
 		//{
 			//std::cout<<"Pushing elements onto the output stack.(Calculator for loop)"<<'\n';
 			//output.push(postfix.get(i));
@@ -52,7 +52,6 @@ int main()
 			//std::cout<<"Executing command."<<'\n';
 			//delete c;
 		//}
-    
 	std::cout<< "Your answer is "<<answer.top()<<'\n';
 	std::cout<< "Please type in your equation or type 'QUIT' to exit the program."<<'\n';
 	std::getline(std::cin,infix);
