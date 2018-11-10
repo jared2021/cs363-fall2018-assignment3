@@ -26,7 +26,7 @@ Number::~Number(void)
 
 bool Number::execute (void)
 {
-	std::cout<<"Pushing a "<<number_ <<"onto the Stack."<<'\n';
+	std::cout<<"Pushing a "<<number_ <<" onto the Stack."<<'\n';
 	stack_.push(number_);
 	return true;
 }

@@ -81,16 +81,17 @@ bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory &
 		slot_=slot_+1;
 	}
 	Stack <Command *> output;
-	for(int i=0;i<slot_;i++)
+	for(int i=slot_-1;i>-1;i--)
 	{
+		std::cout<<"i is "<<i<<'\n';
 		std::cout<<"Pushing elements onto the output stack."<<'\n';
 		output.push(postfix.get(i));
 	}
 	while(!output.is_empty())
 	{
 		Command* c=output.pop();
-		(*c).execute();
 		std::cout<<"Executing command."<<'\n';
+		(*c).execute();
 		delete c;
 	}
 }
