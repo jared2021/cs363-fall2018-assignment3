@@ -24,7 +24,8 @@ public:
 
 protected:
 
-	Stack <int> stack_;
+	Stack <int> & stack_;
+	Stack <int> temp;
 	int number_;
 };
 #endif

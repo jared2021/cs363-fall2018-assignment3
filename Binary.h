@@ -28,8 +28,8 @@ public:
 
 private:
 
-	Stack <int> s_;
-
+	Stack <int> & s_;
+	Stack <int> temp;
 };
 
 #endif

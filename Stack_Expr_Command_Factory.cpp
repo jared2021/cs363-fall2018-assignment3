@@ -7,8 +7,9 @@
 #include "Stack_Expr_Command_Factory.h"
 
 Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(void)
+:stack_(temp)
 {
-
+	
 }
 
 Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(Stack <int> & answer)

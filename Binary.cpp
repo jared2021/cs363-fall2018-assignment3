@@ -8,6 +8,7 @@
 #include "Binary.h"
 
 Binary::Binary(void)
+:s_(temp)
 {
 
 }
@@ -30,6 +31,7 @@ bool Binary::execute(void)
 	std::cout<<"Popping the second number off the stack."<<'\n';
 	int n1=s_.pop();
 	int result=evaluate(n1,n2);
+	std::cout<<"The result is "<<result<<'\n';
 	s_.push(result);
 }
 

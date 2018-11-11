@@ -8,6 +8,7 @@
 #include "Number.h"
 
 Number::Number(void)
+:stack_(temp)
 {
 
 }
