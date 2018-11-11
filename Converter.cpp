@@ -168,3 +168,9 @@ int Converter::get_slot(void)
 {
 	return slot_;
 }
+
+int Converter::get_answer(Stack <int> & answer)
+{
+	int end=answer.pop();
+	return end;
+}

@@ -52,7 +52,8 @@ int main()
 			//std::cout<<"Executing command."<<'\n';
 			//delete c;
 		//}
-	std::cout<< "Your answer is "<<answer.top()<<'\n';
+	int end=convert.get_answer(answer);
+	std::cout<< "Your answer is "<<end<<'\n';
 	std::cout<< "Please type in your equation or type 'QUIT' to exit the program."<<'\n';
 	std::getline(std::cin,infix);
 	}	

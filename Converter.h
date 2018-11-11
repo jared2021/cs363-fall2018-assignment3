@@ -29,6 +29,8 @@ public:
 
 	int get_slot(void);
 
+	int get_answer(Stack <int> & answer);
+
 private:
 	int slot_;
 
