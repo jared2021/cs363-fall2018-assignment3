@@ -57,7 +57,7 @@ public:
   Array (const Array & arr);
 
   /// Destructor.
-  ~Array (void);
+ virtual ~Array (void);
 
   /**
    * Assignment operation

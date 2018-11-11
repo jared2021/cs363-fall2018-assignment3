@@ -21,9 +21,9 @@ public:
 
 	Converter(Stack <Command*> &temp, Stack <char> &precidence);
 
-	~Converter(void);
+	virtual ~Converter(void);
 
-	bool infix_to_postfix(const std::string & infix,Expr_Command_Factory & factory,Array <Command*> & postfix);
+	bool infix_to_postfix(const std::string & infix,Expr_Command_Factory &  factory,Array <Command*> & postfix);
 
 	bool precidence(std::string &token,Command * cmd, Array <Command*> &postfix);
 
@@ -39,6 +39,20 @@ private:
 	Stack <Command*> temp_;
 	
 	Stack <char> precidence_;
+
+	Command* add;
+
+	Command* sub;
+
+	Command* mul;
+
+	Command* div;
+
+	Command* mod;
+
+	Command* num;
+
+	Command* com;
 };
 
 #endif

@@ -6,7 +6,6 @@
  */
 
 #include "Converter.h"
-#include <iostream>
 Converter::Converter(void)
 {
 
@@ -23,76 +22,72 @@ Converter::Converter(Stack <Command*> &temp, Stack <char> &precidence)
 
 Converter::~Converter(void)
 {
-
+	delete add;
+	delete sub;
+	delete mul;
+	delete div;
+	delete mod;
+	delete num;
+	delete com;
 }
 
 bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory & factory, Array<Command*> & postfix)
 {
 	std::istringstream input(infix);
 	std::string token;
-	Command *cmd=0;
 	while(!input.eof ())
 	{
 		input>>token;
 		std::cout<<token<<'\n';
 		if(token=="+")
 		{
-			std::cout<<"Creating add command."<<'\n';
-			cmd=factory.Add_Create();
-			precidence(token,cmd,postfix);
+			add=factory.Add_Create();
+			precidence(token,add,postfix);
 		}
 		else if(token=="-")
 		{
-			cmd=factory.Sub_Create();
-			precidence(token,cmd,postfix);
+			sub=factory.Sub_Create();
+			precidence(token,sub,postfix);
 		}
 		else if(token=="*")
 		{
-			cmd=factory.Mul_Create();
-			precidence(token,cmd,postfix);
+			mul=factory.Mul_Create();
+			precidence(token,mul,postfix);
 		}
 		else if (token=="/")
 		{
-			cmd=factory.Div_Create();
-			precidence(token,cmd,postfix);
+			div=factory.Div_Create();
+			precidence(token,div,postfix);
 		}
 		else if (token=="%")
 		{
-			cmd=factory.Mod_Create();
-			precidence(token,cmd,postfix);
+			mod=factory.Mod_Create();
+			precidence(token,mod,postfix);
 		}
 		else
 		{
-			std::cout<<"Creating a number command."<<'\n';
 			int placeholder;
 			std::istringstream converter(token);
 			converter>>placeholder;
-			cmd=factory.Number_Create(placeholder);
-			postfix.set(slot_,cmd);
-			std::cout<<"Incrementing slot(while loop 1)"<<'\n';
+			num=factory.Number_Create(placeholder);
+			postfix.set(slot_,num);
 			slot_=slot_+1;
 		}
 	}
 	while(!temp_.is_empty())
 	{
-		std::cout<<"Popping elements off of the stack.(Converter while loop)"<<'\n';
 		postfix.set(slot_,temp_.pop());
-		std::cout<<"Incrementing slot (while loop 2)"<<'\n';
 		slot_=slot_+1;
 	}
 	Stack <Command *> output;
 	for(int i=slot_-1;i>-1;i--)
 	{
-		std::cout<<"i is "<<i<<'\n';
-		std::cout<<"Pushing elements onto the output stack."<<'\n';
 		output.push(postfix.get(i));
 	}
 	while(!output.is_empty())
 	{
-		Command* c=output.pop();
-		std::cout<<"Executing command."<<'\n';
-		(*c).execute();
-		delete c;
+		com=output.pop();
+		(*com).execute();
 	}
 }
 bool Converter::precidence(std::string &token, Command * cmd, Array <Command*> &postfix)

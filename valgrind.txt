@@ -1,294 +1,339 @@
-==53631== Memcheck, a memory error detector
-==53631== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==53631== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
-==53631== Command: ./assignment3
-==53631== Parent PID: 50009
-==53631== 
-==53631== Conditional jump or move depends on uninitialised value(s)
-==53631==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403B86: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403BBE: Stack<Command*>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4045B2: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Conditional jump or move depends on uninitialised value(s)
-==53631==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404359: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Conditional jump or move depends on uninitialised value(s)
-==53631==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4027C9: Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404364: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Warning: set address range perms: large range [0x644a040, 0x1b77c680) (undefined)
-==53631== Conditional jump or move depends on uninitialised value(s)
-==53631==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4027E4: Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404364: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Conditional jump or move depends on uninitialised value(s)
-==53631==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403B86: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x40436C: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Conditional jump or move depends on uninitialised value(s)
-==53631==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403BDE: Array<char>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403C16: Stack<char>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404379: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Conditional jump or move depends on uninitialised value(s)
-==53631==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403C5E: Array<Command*>::Array(Array<Command*> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403CCA: Stack<Command*>::Stack(Stack<Command*> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4028C3: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404391: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Conditional jump or move depends on uninitialised value(s)
-==53631==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403CF2: Array<char>::Array(Array<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403D5E: Stack<char>::Stack(Stack<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4028CF: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404391: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Conditional jump or move depends on uninitialised value(s)
-==53631==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x402083: Number::Number(Stack<int>&, int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4025A3: Stack_Expr_Command_Factory::Number_Create(int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4032C7: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Invalid write of size 8
-==53631==    at 0x403A00: Array_Base<Command*>::set(unsigned long, Command*) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4032D5: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a320 is 0 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403B86: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x40436C: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Conditional jump or move depends on uninitialised value(s)
-==53631==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401AD8: Binary::Binary(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x40224C: Add_Command::Add_Command(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4025E5: Stack_Expr_Command_Factory::Add_Create() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x402F3B: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Invalid read of size 1
-==53631==    at 0x402948: Converter::precidence(std::string&, Command*, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x402F4C: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a3e0 is 0 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403CF2: Array<char>::Array(Array<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403D5E: Stack<char>::Stack(Stack<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4028CF: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404391: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Invalid write of size 8
-==53631==    at 0x403A00: Array_Base<Command*>::set(unsigned long, Command*) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403EA5: Stack<Command*>::push(Command*) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x402958: Converter::precidence(std::string&, Command*, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x402F4C: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a3a0 is 0 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403C5E: Array<Command*>::Array(Array<Command*> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403CCA: Stack<Command*>::Stack(Stack<Command*> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4028C3: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404391: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Invalid write of size 1
-==53631==    at 0x40400A: Array_Base<char>::set(unsigned long, char) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x40427A: Stack<char>::push(char) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x402966: Converter::precidence(std::string&, Command*, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x402F4C: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a3e0 is 0 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403CF2: Array<char>::Array(Array<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403D5E: Stack<char>::Stack(Stack<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4028CF: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404391: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Invalid read of size 8
-==53631==    at 0x403B42: Stack<Command*>::pop() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x40344D: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a3a0 is 0 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403C5E: Array<Command*>::Array(Array<Command*> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403CCA: Stack<Command*>::Stack(Stack<Command*> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4028C3: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404391: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Invalid write of size 8
-==53631==    at 0x403A00: Array_Base<Command*>::set(unsigned long, Command*) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x40345B: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a330 is 16 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403B86: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x40436C: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Warning: set address range perms: large range [0x1b77d040, 0x4b9d0708) (undefined)
-==53631== Invalid read of size 8
-==53631==    at 0x40353B: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a330 is 16 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403B86: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x40436C: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Invalid write of size 4
-==53631==    at 0x401EF0: Array_Base<int>::set(unsigned long, int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x402110: Number::execute() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4035B0: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a270 is 0 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404359: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Invalid read of size 4
-==53631==    at 0x401E54: Stack<int>::pop() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401B23: Binary::execute() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4035B0: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a274 is 4 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404359: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Invalid read of size 4
-==53631==    at 0x401E54: Stack<int>::pop() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401B5A: Binary::execute() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4035B0: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a270 is 0 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404359: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Invalid write of size 4
-==53631==    at 0x401EF0: Array_Base<int>::set(unsigned long, int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401BBE: Binary::execute() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4035B0: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a270 is 0 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404359: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Mismatched free() / delete / delete []
-==53631==    at 0x4C2B16D: operator delete(void*) (vg_replace_malloc.c:576)
-==53631==    by 0x4037A8: Array_Base<Command*>::~Array_Base() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4037C4: Array<Command*>::~Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403956: Stack<Command*>::~Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4035D0: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x1b77d040 is 0 bytes inside a block of size 807,745,224 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403B86: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403BBE: Stack<Command*>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4034A3: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Warning: set address range perms: large range [0x1b77d028, 0x4b9d0720) (noaccess)
-==53631== Invalid read of size 4
-==53631==    at 0x401E54: Stack<int>::pop() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x402863: Converter::get_answer(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043C6: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a270 is 0 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404359: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Mismatched free() / delete / delete []
-==53631==    at 0x4C2B16D: operator delete(void*) (vg_replace_malloc.c:576)
-==53631==    by 0x4037F8: Array_Base<char>::~Array_Base() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403814: Array<char>::~Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403968: Stack<char>::~Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x40284C: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x40449B: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a3e0 is 0 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403CF2: Array<char>::Array(Array<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x403D5E: Stack<char>::Stack(Stack<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4028CF: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404391: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Mismatched free() / delete / delete []
-==53631==    at 0x4C2B16D: operator delete(void*) (vg_replace_malloc.c:576)
-==53631==    by 0x4037A8: Array_Base<Command*>::~Array_Base() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4037C4: Array<Command*>::~Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4044B0: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a320 is 0 bytes after a block of size 0 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x403B86: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x40436C: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Mismatched free() / delete / delete []
-==53631==    at 0x4C2B16D: operator delete(void*) (vg_replace_malloc.c:576)
-==53631==    by 0x401C48: Array_Base<int>::~Array_Base() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401C64: Array<int>::~Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401C9E: Stack<int>::~Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x402728: Stack_Expr_Command_Factory::~Stack_Expr_Command_Factory() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4044B8: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==  Address 0x604a2b0 is 0 bytes inside a block of size 44 alloc'd
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4027E4: Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x404364: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== Warning: set address range perms: large range [0x644a028, 0x1b77c698) (noaccess)
-==53631== 
-==53631== HEAP SUMMARY:
-==53631==     in use at exit: 0 bytes in 3 blocks
-==53631==   total heap usage: 24 allocs, 21 frees, 1,163,419,368 bytes allocated
-==53631== 
-==53631== 0 bytes in 1 blocks are definitely lost in loss record 1 of 2
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401AD8: Binary::Binary(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x40224C: Add_Command::Add_Command(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4025E5: Stack_Expr_Command_Factory::Add_Create() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x402F3B: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== 0 bytes in 2 blocks are definitely lost in loss record 2 of 2
-==53631==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
-==53631==    by 0x401CDE: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x401D16: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x402083: Number::Number(Stack<int>&, int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4025A3: Stack_Expr_Command_Factory::Number_Create(int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4032C7: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631==    by 0x4043A9: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
-==53631== 
-==53631== LEAK SUMMARY:
-==53631==    definitely lost: 0 bytes in 3 blocks
-==53631==    indirectly lost: 0 bytes in 0 blocks
-==53631==      possibly lost: 0 bytes in 0 blocks
-==53631==    still reachable: 0 bytes in 0 blocks
-==53631==         suppressed: 0 bytes in 0 blocks
-==53631== 
-==53631== For counts of detected and suppressed errors, rerun with: -v
-==53631== Use --track-origins=yes to see where uninitialised values come from
-==53631== ERROR SUMMARY: 38 errors from 28 contexts (suppressed: 0 from 0)
+==24447== Memcheck, a memory error detector
+==24447== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==24447== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==24447== Command: ./assignment3
+==24447== Parent PID: 179394
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403A0A: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403A51: Stack<Command*>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40423D: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403A72: Array<char>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403AB9: Stack<char>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40424A: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403B02: Array<Command*>::Array(Array<Command*> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403B7E: Stack<Command*>::Stack(Stack<Command*> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4028A4: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40426C: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403BA6: Array<char>::Array(Array<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403C22: Stack<char>::Stack(Stack<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4028B0: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40426C: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40448D: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40271D: Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x404296: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x402738: Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x404296: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403A0A: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40429E: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x402091: Number::Number(Stack<int>&, int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40252B: Stack_Expr_Command_Factory::Number_Create(int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403266: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Invalid write of size 8
+==24447==    at 0x403882: Array_Base<Command*>::set(unsigned long, Command*) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40327C: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a4a0 is 0 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403A0A: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40429E: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2A81E: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401B38: Binary::Binary(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40218C: Add_Command::Add_Command(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40256D: Stack_Expr_Command_Factory::Add_Create() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x402EF0: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Invalid read of size 1
+==24447==    at 0x40292A: Converter::precidence(std::string&, Command*, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x402F05: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a3e0 is 0 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403BA6: Array<char>::Array(Array<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403C22: Stack<char>::Stack(Stack<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4028B0: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40426C: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Invalid write of size 8
+==24447==    at 0x403882: Array_Base<Command*>::set(unsigned long, Command*) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403D6A: Stack<Command*>::push(Command*) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40293A: Converter::precidence(std::string&, Command*, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x402F05: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a3a0 is 0 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403B02: Array<Command*>::Array(Array<Command*> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403B7E: Stack<Command*>::Stack(Stack<Command*> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4028A4: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40426C: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Invalid write of size 1
+==24447==    at 0x403ED4: Array_Base<char>::set(unsigned long, char) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x404147: Stack<char>::push(char) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x402948: Converter::precidence(std::string&, Command*, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x402F05: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a3e0 is 0 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403BA6: Array<char>::Array(Array<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403C22: Stack<char>::Stack(Stack<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4028B0: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40426C: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Invalid read of size 8
+==24447==    at 0x4039C6: Stack<Command*>::pop() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403380: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a3a0 is 0 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403B02: Array<Command*>::Array(Array<Command*> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403B7E: Stack<Command*>::Stack(Stack<Command*> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4028A4: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40426C: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Invalid write of size 8
+==24447==    at 0x403882: Array_Base<Command*>::set(unsigned long, Command*) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40338F: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a4b0 is 16 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403A0A: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40429E: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Warning: set address range perms: large range [0x7c64040, 0x37eb7d88) (undefined)
+==24447== Invalid read of size 8
+==24447==    at 0x4033C3: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a4b0 is 16 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403A0A: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40429E: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Invalid write of size 4
+==24447==    at 0x401EEA: Array_Base<int>::set(unsigned long, int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4020C0: Number::execute() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4033F6: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a420 is 0 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40448D: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Invalid read of size 4
+==24447==    at 0x401E4E: Stack<int>::pop() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401B4D: Binary::execute() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4033F6: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a424 is 4 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40448D: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Invalid read of size 4
+==24447==    at 0x401E4E: Stack<int>::pop() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401B58: Binary::execute() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4033F6: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a420 is 0 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40448D: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Invalid write of size 4
+==24447==    at 0x401EEA: Array_Base<int>::set(unsigned long, int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401B84: Binary::execute() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4033F6: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a420 is 0 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40448D: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Mismatched free() / delete / delete []
+==24447==    at 0x4C2B16D: operator delete(void*) (vg_replace_malloc.c:576)
+==24447==    by 0x4035E6: Array_Base<Command*>::~Array_Base() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403602: Array<Command*>::~Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403622: Stack<Command*>::~Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40340E: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x7c64040 is 0 bytes inside a block of size 807,746,888 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403A0A: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403A51: Stack<Command*>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4033A7: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Warning: set address range perms: large range [0x7c64028, 0x37eb7da0) (noaccess)
+==24447== Invalid read of size 4
+==24447==    at 0x401E4E: Stack<int>::pop() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x402827: Converter::get_answer(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042BA: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a420 is 0 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40448D: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Mismatched free() / delete / delete []
+==24447==    at 0x4C2B16D: operator delete(void*) (vg_replace_malloc.c:576)
+==24447==    by 0x4035E6: Array_Base<Command*>::~Array_Base() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403602: Array<Command*>::~Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x404388: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a4a0 is 0 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403A0A: Array<Command*>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40429E: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Mismatched free() / delete / delete []
+==24447==    at 0x4C2B16D: operator delete(void*) (vg_replace_malloc.c:576)
+==24447==    by 0x401C0E: Array_Base<int>::~Array_Base() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401C2A: Array<int>::~Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401C4A: Stack<int>::~Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4024D6: Stack_Expr_Command_Factory::~Stack_Expr_Command_Factory() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x404390: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x644a040 is 0 bytes inside a block of size 25,271,648 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x402738: Stack_Expr_Command_Factory::Stack_Expr_Command_Factory(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x404296: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2B120: operator delete(void*) (vg_replace_malloc.c:576)
+==24447==    by 0x4027B3: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40280C: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4043CD: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2B120: operator delete(void*) (vg_replace_malloc.c:576)
+==24447==    by 0x4027BF: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40280C: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4043CD: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2B120: operator delete(void*) (vg_replace_malloc.c:576)
+==24447==    by 0x4027CB: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40280C: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4043CD: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Conditional jump or move depends on uninitialised value(s)
+==24447==    at 0x4C2B120: operator delete(void*) (vg_replace_malloc.c:576)
+==24447==    by 0x4027D7: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40280C: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4043CD: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Invalid free() / delete / delete[] / realloc()
+==24447==    at 0x4C2B16D: operator delete(void*) (vg_replace_malloc.c:576)
+==24447==    by 0x4027EF: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40280C: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4043CD: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a6d0 is 0 bytes inside a block of size 64 free'd
+==24447==    at 0x4C2B16D: operator delete(void*) (vg_replace_malloc.c:576)
+==24447==    by 0x4027AA: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40280C: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4043CD: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Block was alloc'd at
+==24447==    at 0x4C2A1E3: operator new(unsigned long) (vg_replace_malloc.c:334)
+==24447==    by 0x40255E: Stack_Expr_Command_Factory::Add_Create() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x402EF0: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== Mismatched free() / delete / delete []
+==24447==    at 0x4C2B16D: operator delete(void*) (vg_replace_malloc.c:576)
+==24447==    by 0x40366A: Array_Base<char>::~Array_Base() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403686: Array<char>::~Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4036A6: Stack<char>::~Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4027F8: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40280C: Converter::~Converter() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4043CD: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==  Address 0x604a3e0 is 0 bytes after a block of size 0 alloc'd
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x403BA6: Array<char>::Array(Array<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403C22: Stack<char>::Stack(Stack<char> const&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4028B0: Converter::Converter(Stack<Command*>&, Stack<char>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40426C: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== 
+==24447== HEAP SUMMARY:
+==24447==     in use at exit: 72 bytes in 4 blocks
+==24447==   total heap usage: 25 allocs, 22 frees, 833,019,164 bytes allocated
+==24447== 
+==24447== 0 bytes in 1 blocks are definitely lost in loss record 2 of 4
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x402091: Number::Number(Stack<int>&, int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40252B: Stack_Expr_Command_Factory::Number_Create(int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403266: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== 0 bytes in 1 blocks are definitely lost in loss record 3 of 4
+==24447==    at 0x4C2A888: operator new[](unsigned long) (vg_replace_malloc.c:423)
+==24447==    by 0x401CC6: Array<int>::Array() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401D0D: Stack<int>::Stack() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x401B38: Binary::Binary(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40218C: Add_Command::Add_Command(Stack<int>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x40256D: Stack_Expr_Command_Factory::Add_Create() (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x402EF0: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== 72 bytes in 1 blocks are definitely lost in loss record 4 of 4
+==24447==    at 0x4C2A1E3: operator new(unsigned long) (vg_replace_malloc.c:334)
+==24447==    by 0x402519: Stack_Expr_Command_Factory::Number_Create(int) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x403266: Converter::infix_to_postfix(std::string const&, Expr_Command_Factory&, Array<Command*>&) (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447==    by 0x4042AF: main (in /home/jascho/cs363-fall2018-assignment3/assignment3)
+==24447== 
+==24447== LEAK SUMMARY:
+==24447==    definitely lost: 72 bytes in 3 blocks
+==24447==    indirectly lost: 0 bytes in 1 blocks
+==24447==      possibly lost: 0 bytes in 0 blocks
+==24447==    still reachable: 0 bytes in 0 blocks
+==24447==         suppressed: 0 bytes in 0 blocks
+==24447== 
+==24447== For counts of detected and suppressed errors, rerun with: -v
+==24447== Use --track-origins=yes to see where uninitialised values come from
+==24447== ERROR SUMMARY: 44 errors from 34 contexts (suppressed: 0 from 0)

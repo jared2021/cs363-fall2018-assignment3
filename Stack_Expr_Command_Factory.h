@@ -17,7 +17,7 @@ public:
 
 	Stack_Expr_Command_Factory (Stack <int> & answer);
 
-	~Stack_Expr_Command_Factory(void);
+	virtual ~Stack_Expr_Command_Factory(void);
 
 	virtual Number* Number_Create (int num);
 

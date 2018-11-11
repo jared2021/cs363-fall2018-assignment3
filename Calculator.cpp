@@ -28,33 +28,19 @@ int main()
 	std::string token;
 	std::cout<<"Please type in your equation or 'QUIT' to exit the program. "<<'\n';
 	std::getline(std::cin,infix);
+	Stack <Command *> temp;
+	Stack <char> precidence;
+	Converter* convert=new Converter (temp,precidence);
 	while(infix!=exit)
 	{
-		Stack <Command *> temp;
 		Stack <int> answer;
 		Stack_Expr_Command_Factory factory( answer);
 		Array <Command *> postfix;
-		Stack <char> precidence;
-		//Stack <Command *> output;
-		Converter convert (temp,precidence);
-		convert.infix_to_postfix(infix,factory,postfix);
-		int slot=convert.get_slot();
-		//std::cout<<slot<<'\n';
-		//for(int i=0;i<slot;i++ )
-		//{
-			//std::cout<<"Pushing elements onto the output stack.(Calculator for loop)"<<'\n';
-			//output.push(postfix.get(i));
-		//}
-		//while(!output.is_empty())
-		//{
-			//Command* c=output.pop();
-			//(*c).execute();
-			//std::cout<<"Executing command."<<'\n';
-			//delete c;
-		//}
-	int end=convert.get_answer(answer);
-	std::cout<< "Your answer is "<<end<<'\n';
-	std::cout<< "Please type in your equation or type 'QUIT' to exit the program."<<'\n';
-	std::getline(std::cin,infix);
-	}	
+		(*convert).infix_to_postfix(infix,factory,postfix);
+		int end=(*convert).get_answer(answer);
+		std::cout<< "Your answer is "<<end<<'\n';
+		std::cout<< "Please type in your equation or type 'QUIT' to exit the program."<<'\n';
+		std::getline(std::cin,infix);
+	}
+	delete convert;
 }

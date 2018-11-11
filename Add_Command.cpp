@@ -25,6 +25,5 @@ Add_Command::~Add_Command(void)
 
 int Add_Command::evaluate(int n1, int n2)const
 {
-	std::cout<<"Evaluating expression based on numbers "<<n1<<" and "<<n2<<'\n';
 	return n1+n2;
 }

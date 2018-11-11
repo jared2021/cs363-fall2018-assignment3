@@ -18,7 +18,7 @@ public:
 
 	Number(Stack <int> & s, int n);
 
-	~Number(void);
+	virtual ~Number(void);
 
 	bool execute(void);
 

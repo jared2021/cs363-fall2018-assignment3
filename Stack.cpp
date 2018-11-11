@@ -101,7 +101,7 @@ const Stack <T> & Stack <T>::operator = (const Stack & rhs)
 template <typename T>
 void Stack <T>::clear (void)
 {
-	(myArray).set_size(0);
+	(myArray).resize(0);
 }
 
 template <typename T>

@@ -17,7 +17,7 @@ public:
 
 	Add_Command(Stack <int> & stack);
 
-	~Add_Command(void);
+	virtual ~Add_Command(void);
 	
 	virtual int evaluate (int n1, int n2)const;
 };

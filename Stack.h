@@ -56,7 +56,7 @@ public:
   Stack (const Stack & s);
 
   /// Destructor.
-  ~Stack (void);
+  virtual ~Stack (void);
 
   /**
    * Assignment operator
