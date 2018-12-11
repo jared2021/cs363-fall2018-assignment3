@@ -1,0 +1,18 @@
+Generating 'make' output using default input
+Generation Time: 1s
+make[1]: Entering directory `/home/hilljh/cs363-sandbox/assignment3/jascho/cs363-fall2018-assignment3'
+rm -rf Binary.o Number.o Add_Command.o Div_Command.o Mul_Command.o Sub_Command.o Mod_Command.o Stack_Expr_Command_Factory.o Converter.o Calculator.o
+make[1]: Leaving directory `/home/hilljh/cs363-sandbox/assignment3/jascho/cs363-fall2018-assignment3'
+make[1]: Entering directory `/home/hilljh/cs363-sandbox/assignment3/jascho/cs363-fall2018-assignment3'
+g++  -fPIC -O -std=c++11 -D_REENTRANT -c  -o "Binary.o" Binary.cpp
+g++  -fPIC -O -std=c++11 -D_REENTRANT -c  -o "Number.o" Number.cpp
+g++  -fPIC -O -std=c++11 -D_REENTRANT -c  -o "Add_Command.o" Add_Command.cpp
+g++  -fPIC -O -std=c++11 -D_REENTRANT -c  -o "Div_Command.o" Div_Command.cpp
+g++  -fPIC -O -std=c++11 -D_REENTRANT -c  -o "Mul_Command.o" Mul_Command.cpp
+g++  -fPIC -O -std=c++11 -D_REENTRANT -c  -o "Sub_Command.o" Sub_Command.cpp
+g++  -fPIC -O -std=c++11 -D_REENTRANT -c  -o "Mod_Command.o" Mod_Command.cpp
+g++  -fPIC -O -std=c++11 -D_REENTRANT -c  -o "Stack_Expr_Command_Factory.o" Stack_Expr_Command_Factory.cpp
+g++  -fPIC -O -std=c++11 -D_REENTRANT -c  -o "Converter.o" Converter.cpp
+g++  -fPIC -O -std=c++11 -D_REENTRANT -c  -o "Calculator.o" Calculator.cpp
+g++  -fPIC -O -std=c++11 -D_REENTRANT -L"." Binary.o Number.o Add_Command.o Div_Command.o Mul_Command.o Sub_Command.o Mod_Command.o Stack_Expr_Command_Factory.o Converter.o Calculator.o -ldl -lrt -lpthread -o "assignment3"
+make[1]: Leaving directory `/home/hilljh/cs363-sandbox/assignment3/jascho/cs363-fall2018-assignment3'
