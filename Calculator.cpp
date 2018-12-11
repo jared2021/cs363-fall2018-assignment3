@@ -38,9 +38,10 @@ int main()
 		Array <Command *> postfix;
 		(*convert).infix_to_postfix(infix,factory,postfix);
 		int end=(*convert).get_answer(answer);
+		infix.clear();
 		std::cout<< "Your answer is "<<end<<'\n';
 		std::cout<< "Please type in your equation or type 'QUIT' to exit the program."<<'\n';
 		std::getline(std::cin,infix);
+		//delete convert;
 	}
-	delete convert;
 }
