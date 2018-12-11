@@ -14,22 +14,22 @@
 #include "Mul_Command.h"
 #include "Div_Command.h"
 #include "Mod_Command.h"
-#include <memory>
+
 class Expr_Command_Factory
 {
 public:
 
-	virtual std::shared_ptr <Number*> Number_Create(int num)=0;
+	virtual Number* Number_Create(int num)=0;
 
-	virtual std::shared_ptr <Add_Command*> Add_Create(void)=0;
+	virtual Add_Command* Add_Create(void)=0;
 
-	virtual std::shared_ptr <Sub_Command*> Sub_Create(void)=0;
+	virtual Sub_Command* Sub_Create(void)=0;
 
-	virtual std::shared_ptr <Mul_Command*> Mul_Create(void)=0;
+	virtual Mul_Command* Mul_Create(void)=0;
 
-	virtual std::shared_ptr <Div_Command*> Div_Create(void)=0;
+	virtual Div_Command* Div_Create(void)=0;
 
-	virtual std::shared_ptr <Mod_Command*> Mod_Create(void)=0;
+	virtual Mod_Command* Mod_Create(void)=0;
 
 private:
 

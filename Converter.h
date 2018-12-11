@@ -7,7 +7,6 @@
 #ifndef _CONVERTER_H_
 #define _COnVERTER_H_
 
-#include <memory>
 #include <string>
 #include <sstream>
 #include "Command.h"
@@ -41,19 +40,19 @@ private:
 	
 	Stack <char> precidence_;
 
-	std::shared_ptr <Command*> add;
+	Command* add;
 
-	std::shared_ptr <Command*> sub;
+	Command* sub;
 
-	std::shared_ptr <Command*> mul;
+	Command* mul;
 
-	std::shared_ptr <Command*> div;
+	Command* div;
 
-	std::shared_ptr <Command*> mod;
+	Command* mod;
 
-	std::shared_ptr <Command*> num;
+	Command* num;
 
-	std::shared_ptr <Command*> com;
+	Command* com;
 };
 
 #endif
