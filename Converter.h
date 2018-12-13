@@ -25,7 +25,7 @@ public:
 
 	bool infix_to_postfix(const std::string & infix,Expr_Command_Factory &  factory,Array <Command*> * postfix);
 
-	bool precidence(std::string &token,Command * cmd, Array <Command*> *postfix);
+	void precidence(std::string &token,Command * cmd, Array <Command*> *postfix);
 
 	int get_slot(void);
 

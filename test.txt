@@ -1,2 +1,6 @@
 5 + 4 - 3
 QUIT
+
+Calculator assignment 3
+attempt 1 time: 0.001s
+attempt 2 (changing number to be checked first) time: 0.002s

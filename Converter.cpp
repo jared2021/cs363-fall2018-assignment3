@@ -41,7 +41,16 @@ bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory &
 		std::cout<<"String being evaluated."<<'\n';
 		input>>token;
 		std::cout<<token<<'\n';
-		if(token=="+")
+		if(token!="+"&&token!="-"&&token!="*"&&token!="/"&&token!="%")
+		{
+			int placeholder;
+			std::istringstream converter(token);
+			converter>>placeholder;
+			num=factory.Number_Create(placeholder);
+			postfix->set(slot_,num);
+			slot_=slot_+1;
+		}
+		else if(token=="+")
 		{
 			add=factory.Add_Create();
 			precidence(token,add,postfix);
@@ -66,15 +75,6 @@ bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory &
 			mod=factory.Mod_Create();
 			precidence(token,mod,postfix);
 		}
-		else
-		{
-			int placeholder;
-			std::istringstream converter(token);
-			converter>>placeholder;
-			num=factory.Number_Create(placeholder);
-			postfix->set(slot_,num);
-			slot_=slot_+1;
-		}
 	}
 	while(!temp_.is_empty())
 	{
@@ -95,7 +95,7 @@ bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory &
 		std::cout<<"Executing command from popping off from the stack."<<'\n';
 	}
 }
-bool Converter::precidence(std::string &token, Command * cmd, Array <Command*> *postfix)
+void Converter::precidence(std::string &token, Command * cmd, Array <Command*> *postfix)
 {
 	if(token=="+"&&!parenthesis_||token=="-"&&!parenthesis_)
 	{
@@ -161,7 +161,6 @@ bool Converter::precidence(std::string &token, Command * cmd, Array <Command*> *
 	{
 		parenthesis_=false;
 	}
-	return true;
 }
 
 int Converter::get_slot(void)
