@@ -28,20 +28,22 @@ int main()
 	std::string token;
 	std::cout<<"Please type in your equation or 'QUIT' to exit the program. "<<'\n';
 	std::getline(std::cin,infix);
-	Stack <Command *> temp;
-	Stack <char> precidence;
-	Converter* convert=new Converter (temp,precidence);
+	//Stack <Command *> temp;
+	//Stack <char> precidence;
 	while(infix!=exit)
 	{
+		Stack <Command *> temp;
+		Stack <char> precidence;
+		Converter* convert=new Converter(temp,precidence);
 		Stack <int> answer;
 		Stack_Expr_Command_Factory factory( answer);
-		Array <Command *> postfix;
+		Array <Command *> *postfix=new Array <Command*> (20);
 		(*convert).infix_to_postfix(infix,factory,postfix);
 		int end=(*convert).get_answer(answer);
 		infix.clear();
 		std::cout<< "Your answer is "<<end<<'\n';
 		std::cout<< "Please type in your equation or type 'QUIT' to exit the program."<<'\n';
 		std::getline(std::cin,infix);
-		//delete convert;
+		delete convert;
 	}
 }

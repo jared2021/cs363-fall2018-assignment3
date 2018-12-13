@@ -20,6 +20,11 @@ public:
 	virtual ~Add_Command(void);
 	
 	virtual int evaluate (int n1, int n2)const;
+
+	virtual int get_precidence(void);
+	
+private:
+	int precidence_;
 };
 
 #endif

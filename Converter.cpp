@@ -31,7 +31,7 @@ Converter::~Converter(void)
 	delete com;
 }
 
-bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory & factory, Array<Command*> & postfix)
+bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory & factory, Array<Command*> * postfix)
 {
 	std::cout<<"Starting infix to postfix."<<'\n';
 	std::istringstream input(infix);
@@ -72,21 +72,20 @@ bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory &
 			std::istringstream converter(token);
 			converter>>placeholder;
 			num=factory.Number_Create(placeholder);
-			postfix.set(slot_,num);
+			postfix->set(slot_,num);
 			slot_=slot_+1;
 		}
 	}
 	while(!temp_.is_empty())
 	{
 		std::cout<<"Setting command in array."<<'\n';
-		postfix.set(slot_,temp_.pop());
+		postfix->set(slot_,temp_.pop());
 		slot_=slot_+1;
 	}
-	Stack <Command *> output;
-	std::cout<<"Creating stack output."<<'\n';
+	Stack <Command*> output;
 	for(int i=slot_-1;i>-1;i--)
 	{
-		output.push(postfix.get(i));
+		output.push(postfix->get(i));
 		std::cout<<"Pushing command from array to newly created stack."<<'\n';
 	}
 	while(!output.is_empty())
@@ -96,7 +95,7 @@ bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory &
 		std::cout<<"Executing command from popping off from the stack."<<'\n';
 	}
 }
-bool Converter::precidence(std::string &token, Command * cmd, Array <Command*> &postfix)
+bool Converter::precidence(std::string &token, Command * cmd, Array <Command*> *postfix)
 {
 	if(token=="+"&&!parenthesis_||token=="-"&&!parenthesis_)
 	{
@@ -110,7 +109,7 @@ bool Converter::precidence(std::string &token, Command * cmd, Array <Command*> &
 			while(precidence_.top()=='>'||precidence_.top()=='='||precidence_.top()=='!')
 			{
 				precidence_.pop();
-				postfix.set(slot_,temp_.pop());
+				postfix->set(slot_,temp_.pop());
 				slot_=slot_+1;
 			}
 		}
@@ -127,7 +126,7 @@ bool Converter::precidence(std::string &token, Command * cmd, Array <Command*> &
 			while(precidence_.top()=='!')
 			{
 				precidence_.pop();
-				postfix.set(slot_,temp_.pop());
+				postfix->set(slot_,temp_.pop());
 				slot_=slot_+1;
 			}
 		}
@@ -139,7 +138,7 @@ bool Converter::precidence(std::string &token, Command * cmd, Array <Command*> &
 			while(precidence_.top()=='='||precidence_.top()=='!')
 			{
 				precidence_.pop();
-				postfix.set(slot_,temp_.pop());
+				postfix->set(slot_,temp_.pop());
 				slot_=slot_+1;
 			}
 		}

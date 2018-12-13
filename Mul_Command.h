@@ -21,8 +21,12 @@ public:
 
 	virtual int evaluate (int n1,int n2)const;
 
+	virtual int get_precidence(void);
+
 private:
 
-	Stack <int> stack_;
+	//Stack <int> stack_;
+
+	int precidence_;
 };
 #endif
