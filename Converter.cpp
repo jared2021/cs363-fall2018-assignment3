@@ -31,7 +31,7 @@ Converter::~Converter(void)
 	delete com;
 }
 
-bool Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory & factory, Array<Command*> * postfix)
+void Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory & factory, Array<Command*> * postfix)
 {
 	std::cout<<"Starting infix to postfix."<<'\n';
 	std::istringstream input(infix);
