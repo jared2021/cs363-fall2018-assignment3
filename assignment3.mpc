@@ -23,7 +23,7 @@ project (assignment3){
 		Mod_Command.cpp
 		Stack_Expr_Command_Factory.cpp
 		Converter.cpp
-		Calculator.cpp
+		Calculator_v1.cpp
 	}
 
 	Template_Files{
