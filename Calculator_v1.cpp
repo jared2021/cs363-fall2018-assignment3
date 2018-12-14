@@ -28,8 +28,6 @@ int main()
 	std::string token;
 	std::cout<<"Please type in your equation or 'QUIT' to exit the program. "<<'\n';
 	std::getline(std::cin,infix);
-	//Stack <Command *> temp;
-	//Stack <char> precidence;
 	while(infix!=exit)
 	{
 		Stack <Command *> temp;

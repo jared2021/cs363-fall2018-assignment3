@@ -33,14 +33,11 @@ Converter::~Converter(void)
 
 void Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory & factory, Array<Command*> * postfix)
 {
-	std::cout<<"Starting infix to postfix."<<'\n';
 	std::istringstream input(infix);
 	std::string token;
 	while(!input.eof ())
 	{
-		std::cout<<"String being evaluated."<<'\n';
 		input>>token;
-		std::cout<<token<<'\n';
 		if(token!="+"&&token!="-"&&token!="*"&&token!="/"&&token!="%")
 		{
 			int placeholder;
@@ -78,7 +75,6 @@ void Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory &
 	}
 	while(!temp_.is_empty())
 	{
-		std::cout<<"Setting command in array."<<'\n';
 		postfix->set(slot_,temp_.pop());
 		slot_=slot_+1;
 	}
@@ -86,13 +82,11 @@ void Converter::infix_to_postfix(const std::string &infix,Expr_Command_Factory &
 	for(int i=slot_-1;i>-1;i--)
 	{
 		output.push(postfix->get(i));
-		std::cout<<"Pushing command from array to newly created stack."<<'\n';
 	}
 	while(!output.is_empty())
 	{
 		com=output.pop();
 		(*com).execute();
-		std::cout<<"Executing command from popping off from the stack."<<'\n';
 	}
 }
 void Converter::precidence(std::string &token, Command * cmd, Array <Command*> *postfix)
